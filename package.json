@@ -11,7 +11,11 @@
     "url": "git+ssh://git@github.com/vastec/maintainable-inline-svg.git"
   },
   "keywords": [
-    "svg"
+    "svg",
+    "maintainable",
+    "inline",
+    "sprites",
+    "styled"
   ],
   "author": "Tomasz Nieżurawski <tomasz@niezurawski.pl>",
   "license": "MIT",
