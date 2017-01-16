@@ -18,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/vastec/maintainable-inline-svg/issues"
   },
-  "homepage": "https://github.com/vastec/maintainable-inline-svg#readme"
+  "homepage": "https://github.com/vastec/maintainable-inline-svg#readme",
+  "devDependencies": {
+    "ava": "0.17.0",
+    "nyc": "10.0.0"
+  },
+  "dependencies": {
+    "cheerio": "0.22.0",
+    "object-assign": "4.1.1"
+  }
 }

@@ -1,10 +1,15 @@
 {
-  "predef": [
+  "globals": [
     "document",
     "window",
-    "-Promise"
+    "-Promise",
+    "require",
+    "module"
   ],
+
   "browser": true,
+  "node" : true,
+
   "boss": true,
   "curly": true,
   "debug": false,
