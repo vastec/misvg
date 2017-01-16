@@ -1,7 +1,7 @@
 {
   "name": "maintainable-inline-svg",
   "version": "0.0.0",
-  "description": "Combines multiple SVG files into one JS object with properties as sprites.",
+  "description": "Combines multiple SVG files into one JS object with SVG sprites as string properties.",
   "main": "src/misvg.js",
   "scripts": {
     "test": "nyc ava -v"
