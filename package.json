@@ -4,8 +4,12 @@
   "description": "Combines multiple SVG files into one JS object with SVG sprites as string properties.",
   "main": "src/misvg.js",
   "scripts": {
+    "pretest": "xo src/*.js test/*.js",
     "test": "nyc ava -v"
   },
+	"pre-commit": [
+		"pretest"
+	],
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/vastec/maintainable-inline-svg.git"
@@ -25,7 +29,9 @@
   "homepage": "https://github.com/vastec/maintainable-inline-svg#readme",
   "devDependencies": {
     "ava": "0.17.0",
-    "nyc": "10.0.0"
+    "nyc": "10.0.0",
+    "pre-commit": "1.2.2",
+    "xo": "0.17.1"
   },
   "dependencies": {
     "cheerio": "0.22.0",
