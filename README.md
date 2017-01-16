@@ -1,0 +1,1 @@
+# maintainable-inline-svg

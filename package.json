@@ -1,0 +1,22 @@
+{
+  "name": "maintainable-inline-svg",
+  "version": "0.0.0",
+  "description": "Combines multiple SVG files into one JS file",
+  "main": "src/misvg.js",
+  "scripts": {
+    "test": "nyc ava -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vastec/maintainable-inline-svg.git"
+  },
+  "keywords": [
+    "svg"
+  ],
+  "author": "Tomasz Nieżurawski <tomasz@niezurawski.pl>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vastec/maintainable-inline-svg/issues"
+  },
+  "homepage": "https://github.com/vastec/maintainable-inline-svg#readme"
+}
