@@ -1,5 +1,5 @@
 {
-  "name": "maintainable-inline-svg",
+  "name": "misvg",
   "version": "0.0.0",
   "description": "Combines multiple SVG files into one JS object with SVG sprites as string properties.",
   "main": "src/misvg.js",
@@ -12,7 +12,7 @@
 	],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/vastec/maintainable-inline-svg.git"
+    "url": "git+ssh://git@github.com/vastec/misvg.git"
   },
   "keywords": [
     "svg",
@@ -24,9 +24,9 @@
   "author": "Tomasz Nieżurawski <tomasz@niezurawski.pl>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vastec/maintainable-inline-svg/issues"
+    "url": "https://github.com/vastec/misvg/issues"
   },
-  "homepage": "https://github.com/vastec/maintainable-inline-svg#readme",
+  "homepage": "https://github.com/vastec/misvg#readme",
   "devDependencies": {
     "ava": "0.17.0",
     "nyc": "10.0.0",

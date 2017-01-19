@@ -32,7 +32,7 @@ function misvg(options) {
 			for (var prop in sprites) {
 				/* istanbul ignore else */
 				if (Object.prototype.hasOwnProperty.call(sprites, prop)) {
-					str += '\n' + stringBelt.addIndent(misvgOptions.indent) + '\'' + prop + '\': \'' + sprites[prop] + '\',';
+					str += '\n' + stringBelt.addIndent(misvgOptions.indent) + '\'' + prop + '\': `' + sprites[prop] + '`,';
 				}
 			}
 
