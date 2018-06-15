@@ -1,23 +1,23 @@
 /* global require, module */
 'use strict';
 
-var assign = require('object-assign');
-var loadXml = require('./utils/load-xml');
-var stringBelt = require('./utils/string-belt');
+const assign = require('object-assign');
+const loadXml = require('./utils/load-xml');
+const stringBelt = require('./utils/string-belt');
 
-var DEFAULT_OPTIONS = {
+const DEFAULT_OPTIONS = {
 	indent: 2
 };
 
 function misvg(options) {
-	var misvgOptions = assign({}, DEFAULT_OPTIONS, options);
-	var sprites = {};
+	const misvgOptions = assign({}, DEFAULT_OPTIONS, options);
+	const sprites = {};
 
 	return {
-		add: function (key, file) {
-			var sprite = loadXml('');      // Empty XML file for SVG element
-			var xmlFile = loadXml(file);
-			var svgElement = xmlFile('svg');   // Ignore XML tag, DOCTYPE and just get the SVG element
+		add(key, file) {
+			const sprite = loadXml('');					// Empty XML file for SVG element
+			const xmlFile = loadXml(file);
+			const svgElement = xmlFile('svg');	// Ignore XML tag, DOCTYPE and just get the SVG element
 
 			sprite.root().append(svgElement);
 
@@ -26,10 +26,10 @@ function misvg(options) {
 			return this;
 		},
 
-		getObjectString: function () {
-			var str = '{';
+		getObjectString() {
+			let str = '{';
 
-			for (var prop in sprites) {
+			for (const prop in sprites) {
 				/* istanbul ignore else */
 				if (Object.prototype.hasOwnProperty.call(sprites, prop)) {
 					str += '\n' + stringBelt.addIndent(misvgOptions.indent) + '\'' + prop + '\': `' + sprites[prop] + '`,';
@@ -40,7 +40,7 @@ function misvg(options) {
 			return str;
 		},
 
-		getSprites: function () {
+		getSprites() {
 			return sprites;
 		}
 	};

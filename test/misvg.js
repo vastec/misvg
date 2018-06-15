@@ -13,7 +13,7 @@ const FIXTURE_SVGS = {
 test('should create proper object with inline sprites', async t => {
 	const store = misvg();
 
-	store
+	await store
 		.add('plus', doctype + FIXTURE_SVGS.plus)
 		.add('notes', doctype + FIXTURE_SVGS.notes);
 
@@ -30,7 +30,7 @@ test('should create proper object string with inline sprites and default indent 
   'notes': \`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26"><g class="notes-stroke" stroke="none" stroke-width="1" fill="none"><circle class="notes-circle" cx="13" cy="13" r="12.5"/><g class="notes-pencil" transform="translate(6.500000, 6.500000)"><path d="M12.3229167,3.78916992 L12.3229167,11.2395833 C12.3229167,12.2117734 11.5346901,13 10.5625,13 L1.76041667,13 C0.788226562,13 0,12.2117734 0,11.2395833 L0,2.4375 C0,1.4653099 0.788226562,0.677083333 1.76041667,0.677083333 L9.21038997,0.677083333 L7.45082601,2.4375 L1.76041667,2.4375 L1.76041667,11.2395833 L10.5625,11.2395833 L10.5625,5.55002669 L12.3229167,3.78916992 L12.3229167,3.78916992 Z M10.9716593,0.161336263 L10.3493245,0.783671061 L12.2163289,2.65111556 L12.8386637,2.02878076 L10.9716593,0.161336263 L10.9716593,0.161336263 Z M4.12597656,7.00875195 L5.99298096,8.87575635 L11.5939941,3.27386296 L9.72698975,1.40641846 L4.12597656,7.00875195 L4.12597656,7.00875195 Z M3.52083333,9.47916667 L5.28125,9.47916667 L3.52083333,7.71875 L3.52083333,9.47916667 L3.52083333,9.47916667 Z" id="Shape"/></g></g></svg>\`
 }`;
 
-	store
+	await store
 		.add('plus', doctype + FIXTURE_SVGS.plus)
 		.add('notes', doctype + FIXTURE_SVGS.notes);
 
@@ -43,7 +43,7 @@ test('should create proper object string with inline sprites and different inden
     'notes': \`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26"><g class="notes-stroke" stroke="none" stroke-width="1" fill="none"><circle class="notes-circle" cx="13" cy="13" r="12.5"/><g class="notes-pencil" transform="translate(6.500000, 6.500000)"><path d="M12.3229167,3.78916992 L12.3229167,11.2395833 C12.3229167,12.2117734 11.5346901,13 10.5625,13 L1.76041667,13 C0.788226562,13 0,12.2117734 0,11.2395833 L0,2.4375 C0,1.4653099 0.788226562,0.677083333 1.76041667,0.677083333 L9.21038997,0.677083333 L7.45082601,2.4375 L1.76041667,2.4375 L1.76041667,11.2395833 L10.5625,11.2395833 L10.5625,5.55002669 L12.3229167,3.78916992 L12.3229167,3.78916992 Z M10.9716593,0.161336263 L10.3493245,0.783671061 L12.2163289,2.65111556 L12.8386637,2.02878076 L10.9716593,0.161336263 L10.9716593,0.161336263 Z M4.12597656,7.00875195 L5.99298096,8.87575635 L11.5939941,3.27386296 L9.72698975,1.40641846 L4.12597656,7.00875195 L4.12597656,7.00875195 Z M3.52083333,9.47916667 L5.28125,9.47916667 L3.52083333,7.71875 L3.52083333,9.47916667 L3.52083333,9.47916667 Z" id="Shape"/></g></g></svg>\`
 }`;
 
-	store.add('notes', doctype + FIXTURE_SVGS.notes);
+	await store.add('notes', doctype + FIXTURE_SVGS.notes);
 
 	t.is(store.getObjectString(), expected);
 });
